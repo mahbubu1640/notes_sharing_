@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block title %}Home - My Website{% endblock %}
+
+{% block content %}
+
+<style>
+    .banner {
+        background-image: url("{% static 'images/banner.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .banner h1 {
+        color: #ddadad; /* Set the desired text color */
+        font-size: 48px; /* Set the desired font size */
+    }
+</style>
+
+
+<h1>Welcome to the Home Page</h1>
+    <!-- Add your content here -->
+    <!-- <h2>Register Account : <a href="/accounts/register/">Register </a></h2>
+    <h2>Login Account : <a href="/login/">Login </a></h2>
+    <h2>Logout : <a href="/logout/">Logout</a></h2><hr>
+    <a href="{% url 'logout' %}">Logout</a> -->
+    <h1>See Profile <a href="/accounts/profile/">profile</a></h1>
+    <h1>Create note :  <a href="/api/">click here to create notes</a> </h1>
+    
+<div class="banner">
+    <img src="{% static 'images/banner.jpg' %}" alt="Banner Image">
+</div>
+
+{% endblock %}
